@@ -1,0 +1,45 @@
+<!-- 복습완료 -->
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		function chk() {
+			if(!frm.num.value) {
+				alert("숫자를 입력해주세요");
+				frm.num.focus();
+				return false;
+			}
+			if(isNaN(frm.num.value)){
+				alert("문자입니다. 숫자를 입력해주세요.")
+				frm.num.focus();
+				frm.num.value="" //입력된 글자 지우기
+				return false;
+				
+			}
+			
+			return true; // 못찾으면 404에러임
+			
+		}
+	
+	
+	
+	</script>
+	
+	</head>
+	<body>
+		<h1>숫자를 입력하세요</h1>
+		<form action="Add3" name="frm" method="get" onsubmit="return chk()"> <!-- 1.숫자가 유효한지 체크함 2.Form의 기본은 get방식임-->
+			숫자: <input type="text" name="num"><p> <!-- 입력한 숫자가 num이라는 파라매터에 담겨서 감 -->
+			위치: <input type="text" name="loc"><p>
+				 <input type="submit" value="확인">
+		</form>	
+	
+	</body>
+</html>
+ <!-- 1. onsubmit를 통하여 숫자가 유효한지 체크함 -> 체크하여 유효할시 Browser가 Server에 num&loc를 가지고 Request함
+ 2. Server에서 Add3를 실행하여 Browser에 Response 하게 됨
+ 3. body에서 그림을 그리고 자바스크립트에서 검증하고 자바에서 연산을 함
+ 4. 
+  -->
