@@ -28,6 +28,7 @@ public class Add3 extends HttpServlet { //보통 명칭이 동일: add3
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("이미Up 내용을 수정...");
 		// request 객체는 add3에서 정보를 담아서 server에 요청, response 객체는 로그인시 웹브라우저에 화면을 꾸며줌
 		// TODO Auto-generated method stub
 		System.out.println("doGet 여기왔네");
